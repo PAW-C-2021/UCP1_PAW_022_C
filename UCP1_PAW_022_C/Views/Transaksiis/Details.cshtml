@@ -1,0 +1,54 @@
+﻿@model UCP1_PAW_022_C.Models.Transaksii
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Transaksii</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Jml Transaksi")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JmlTransaksi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Uang Bayar")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UangBayar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Uang Kembali")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UangKembali)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Id Barang")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdBarangNavigation.IdBarang)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName(".Id Kasir")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdKasirNavigation.IdKasir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Id Pembeli")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPembeliNavigation.IdPembeli)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdTransaksi">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

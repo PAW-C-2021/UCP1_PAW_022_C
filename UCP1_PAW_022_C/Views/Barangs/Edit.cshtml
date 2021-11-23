@@ -1,0 +1,44 @@
+﻿@model UCP1_PAW_022_C.Models.Barang
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Barang</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdBarang" />
+            <div class="form-group">
+                <label asp-for="NamaBarang" class="control-label">Nama Barang</label>
+                <input asp-for="NamaBarang" class="form-control" />
+                <span asp-validation-for="NamaBarang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HargaBarang" class="control-label">Harga Barang</label>
+                <input asp-for="HargaBarang" class="form-control" />
+                <span asp-validation-for="HargaBarang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JumlahBarang" class="control-label">Jumlah Barang</label>
+                <input asp-for="JumlahBarang" class="form-control" />
+                <span asp-validation-for="JumlahBarang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
